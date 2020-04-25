@@ -1,0 +1,35 @@
+{
+  "name": "ssr-react",
+  "version": "1.0.0",
+  "description": "Projeto base para server side rendering com node e react.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "npm-run-all --parallel local:*",
+    "local:build-server": "webpack --config webpack.server.js --watch",
+    "local:server": "nodemon --watch build --exec node build/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafhaeloliveira/node-ssr-react.git"
+  },
+  "author": "Rafhael de Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafhaeloliveira/node-ssr-react/issues"
+  },
+  "homepage": "https://github.com/rafhaeloliveira/node-ssr-react#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "nodemon": "^2.0.3",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
